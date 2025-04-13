@@ -1,9 +1,13 @@
 {
 	"name": "aws-lambda-radar",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Modern utility functions for AWS Lambda in Node.js",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/tejastn10/aws-lambda-radar.git"
+	},
 	"scripts": {
 		"build": "tsc",
 		"format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
@@ -38,16 +42,16 @@
 		"@eslint/eslintrc": "^3.3.1",
 		"@types/aws-lambda": "^8.10.149",
 		"@types/jest": "^29.5.14",
-		"@types/node": "^22.14.0",
+		"@types/node": "^22.14.1",
 		"@typescript-eslint/eslint-plugin": "^8.29.1",
 		"@typescript-eslint/parser": "^8.29.1",
 		"eslint": "^9.24.0",
 		"eslint-config-prettier": "^10.1.2",
 		"eslint-plugin-prettier": "^5.2.6",
 		"jest": "^29.7.0",
-		"lint-staged": "^15.5.0",
+		"lint-staged": "^15.5.1",
 		"prettier": "^3.5.3",
-		"ts-jest": "^29.3.1",
+		"ts-jest": "^29.3.2",
 		"typescript": "^5.8.3"
 	},
 	"peerDependencies": {

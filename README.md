@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo.svg" alt="Logo">
+  <img src="https://raw.githubusercontent.com/tejastn10/aws-lambda-radar/refs/heads/main/logo.svg" alt="Logo">
 </p>
 
 # AWS-Lambda-Radar 🔭

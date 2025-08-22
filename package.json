@@ -32,9 +32,9 @@
 	"engines": {
 		"node": ">=20"
 	},
-	"packageManager": "npm@11.5.1",
+	"packageManager": "npm@11.5.2",
 	"dependencies": {
-		"@aws-sdk/client-lambda": "^3.851.0",
+		"@aws-sdk/client-lambda": "^3.873.0",
 		"reflect-metadata": "^0.2.2"
 	},
 	"devDependencies": {
@@ -43,18 +43,18 @@
 		"@eslint/eslintrc": "^3.3.1",
 		"@types/aws-lambda": "^8.10.152",
 		"@types/jest": "^30.0.0",
-		"@types/node": "^24.1.0",
-		"@typescript-eslint/eslint-plugin": "^8.38.0",
-		"@typescript-eslint/parser": "^8.38.0",
-		"eslint": "^9.31.0",
+		"@types/node": "^24.3.0",
+		"@typescript-eslint/eslint-plugin": "^8.40.0",
+		"@typescript-eslint/parser": "^8.40.0",
+		"eslint": "^9.33.0",
 		"eslint-config-prettier": "^10.1.8",
-		"eslint-plugin-prettier": "^5.5.3",
+		"eslint-plugin-prettier": "^5.5.4",
 		"husky": "^9.1.7",
 		"jest": "^30.0.5",
-		"lint-staged": "^16.1.2",
+		"lint-staged": "^16.1.5",
 		"prettier": "^3.6.2",
-		"ts-jest": "^29.4.0",
-		"typescript": "^5.8.3"
+		"ts-jest": "^29.4.1",
+		"typescript": "^5.9.2"
 	},
 	"peerDependencies": {
 		"@types/aws-lambda": "^8.10.126"

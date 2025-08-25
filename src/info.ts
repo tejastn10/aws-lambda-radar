@@ -1,6 +1,6 @@
-import { Context } from "aws-lambda";
-import os from "os";
-import { LambdaInfo, SystemInfo, MinimalLambdaInfo } from "./types";
+import os from "node:os";
+import type { Context } from "aws-lambda";
+import type { LambdaInfo, MinimalLambdaInfo, SystemInfo } from "./types";
 
 // Track cold starts
 let isFirstInvocation = true;
@@ -19,7 +19,7 @@ const getLambdaInfo = (context: Context): LambdaInfo => {
 	return {
 		functionName: context.functionName,
 		functionVersion: context.functionVersion,
-		memoryLimitInMB: parseInt(context.memoryLimitInMB),
+		memoryLimitInMB: parseInt(context.memoryLimitInMB, 10),
 		memoryUsageInMB,
 		executionEnvironment: process.env.AWS_EXECUTION_ENV,
 		logGroupName: context.logGroupName,
@@ -62,7 +62,7 @@ const getAliasFromContext = (context: Context): string | undefined => {
 
 	// If the last part is a number, it's a version not an alias
 	const lastPart = arnParts[arnParts.length - 1];
-	if (lastPart && isNaN(Number(lastPart))) {
+	if (lastPart && Number.isNaN(Number(lastPart))) {
 		return lastPart;
 	}
 
@@ -93,7 +93,7 @@ const getSystemInfo = (): SystemInfo => {
  */
 const getMemoryUtilization = (context: Context): number => {
 	const usedMemory = process.memoryUsage().rss;
-	const totalMemory = parseInt(context.memoryLimitInMB) * 1024 * 1024;
+	const totalMemory = parseInt(context.memoryLimitInMB, 10) * 1024 * 1024;
 	return Math.round((usedMemory / totalMemory) * 100 * 100) / 100;
 };
 

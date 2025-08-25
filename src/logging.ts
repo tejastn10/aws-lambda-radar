@@ -1,6 +1,6 @@
-import { Context } from "aws-lambda";
+import type { Context } from "aws-lambda";
 import { getLambdaInfo, getMinimalLambdaInfo } from "./info";
-import { LambdaLogger, LogOptions } from "./types";
+import type { LambdaLogger, LogOptions } from "./types";
 
 /**
  * Creates a logger that includes Lambda context information

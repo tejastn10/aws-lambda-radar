@@ -1,8 +1,8 @@
-import { Context } from "aws-lambda";
+import type { Context } from "aws-lambda";
 import { getLambdaInfo } from "./info";
 import { createContextLogger } from "./logging";
 import { measureExecutionTime } from "./performance";
-import { LambdaHandler } from "./types";
+import type { LambdaHandler } from "./types";
 
 /**
  * Create middleware for AWS Lambda handlers that adds automatic logging

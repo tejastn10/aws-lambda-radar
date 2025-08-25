@@ -1,8 +1,8 @@
 import {
-	AliasConfiguration,
-	FunctionConfiguration,
+	type AliasConfiguration,
+	type FunctionConfiguration,
 	GetFunctionConfigurationCommand,
-	GetFunctionConfigurationCommandOutput,
+	type GetFunctionConfigurationCommandOutput,
 	LambdaClient,
 	ListAliasesCommand,
 	ListVersionsByFunctionCommand,

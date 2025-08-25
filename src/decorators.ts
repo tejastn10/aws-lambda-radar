@@ -1,8 +1,8 @@
-import { Context } from "aws-lambda";
+import type { Context } from "aws-lambda";
 import { getLambdaInfo, getMinimalLambdaInfo } from "./info";
 import { createContextLogger } from "./logging";
 import { measureExecutionTime } from "./performance";
-import { LogOptions } from "./types";
+import type { LogOptions } from "./types";
 import "reflect-metadata";
 
 /**

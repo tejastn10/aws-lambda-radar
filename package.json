@@ -1,6 +1,6 @@
 {
 	"name": "aws-lambda-radar",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Modern utility functions for AWS Lambda in Node.js",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
@@ -10,8 +10,12 @@
 	},
 	"scripts": {
 		"build": "tsc",
-		"format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-		"lint": "eslint \"{src,libs}/**/*.ts\" --fix",
+		"lint": "biome lint .",
+		"lint:fix": "biome lint --write .",
+		"format": "biome format --write .",
+		"format:check": "biome format .",
+		"check": "biome check .",
+		"check:fix": "biome check --write .",
 		"test": "jest",
 		"test:watch": "jest --watch",
 		"test:cov": "jest --coverage --collectCoverageFrom='src/**/*.{ts,tsx}'",
@@ -19,8 +23,8 @@
 		"prepare": "husky"
 	},
 	"lint-staged": {
-		"*.{js,ts}": [
-			"eslint --fix"
+		"*.{js,ts,json}": [
+			"biome check --write --no-errors-on-unmatched"
 		]
 	},
 	"husky": {
@@ -38,21 +42,15 @@
 		"reflect-metadata": "^0.2.2"
 	},
 	"devDependencies": {
+		"@biomejs/biome": "^2.2.2",
 		"@commitlint/cli": "^19.8.1",
 		"@commitlint/config-conventional": "^19.8.1",
-		"@eslint/eslintrc": "^3.3.1",
 		"@types/aws-lambda": "^8.10.152",
 		"@types/jest": "^30.0.0",
 		"@types/node": "^24.3.0",
-		"@typescript-eslint/eslint-plugin": "^8.40.0",
-		"@typescript-eslint/parser": "^8.40.0",
-		"eslint": "^9.33.0",
-		"eslint-config-prettier": "^10.1.8",
-		"eslint-plugin-prettier": "^5.5.4",
 		"husky": "^9.1.7",
 		"jest": "^30.0.5",
 		"lint-staged": "^16.1.5",
-		"prettier": "^3.6.2",
 		"ts-jest": "^29.4.1",
 		"typescript": "^5.9.2"
 	},

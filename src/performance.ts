@@ -1,4 +1,4 @@
-import { ExecutionResult } from "./types";
+import type { ExecutionResult } from "./types";
 
 /**
  * Measure execution time of a function

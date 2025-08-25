@@ -12,6 +12,9 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
+# Optional biome cache
+.biome-cache
+
 # OS
 .DS_Store
 

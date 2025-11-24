@@ -36,22 +36,22 @@
 	"engines": {
 		"node": ">=20"
 	},
-	"packageManager": "npm@11.6.1",
+	"packageManager": "npm@11.6.3",
 	"dependencies": {
-		"@aws-sdk/client-lambda": "^3.901.0",
+		"@aws-sdk/client-lambda": "^3.938.0",
 		"reflect-metadata": "^0.2.2"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^2.2.4",
+		"@biomejs/biome": "^2.3.7",
 		"@commitlint/cli": "^20.1.0",
 		"@commitlint/config-conventional": "^20.0.0",
-		"@types/aws-lambda": "^8.10.153",
+		"@types/aws-lambda": "^8.10.159",
 		"@types/jest": "^30.0.0",
-		"@types/node": "^24.6.2",
+		"@types/node": "^24.10.1",
 		"husky": "^9.1.7",
 		"jest": "^30.2.0",
-		"lint-staged": "^16.2.3",
-		"ts-jest": "^29.4.4",
+		"lint-staged": "^16.2.7",
+		"ts-jest": "^29.4.5",
 		"typescript": "^5.9.3"
 	},
 	"peerDependencies": {
